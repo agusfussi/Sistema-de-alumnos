@@ -6,9 +6,17 @@ namespace Sistema_de_alumnos
 {
     public class Alumno
     {
-        public string nombre { get; set; }
-        public int legajo { get; set; }
-        public decimal nota1 { get; set; }
-        public decimal nota2 { get; set; }
+        public string Nombre { get; set; }
+        public int Legajo { get; set; }
+        public decimal Nota1 { get; set; }
+        public decimal Nota2 { get; set; }
+
+        public Alumno(string nombre, int legajo, decimal nota1, decimal nota2)
+        {
+            Nombre = nombre;
+            Legajo = legajo;
+            Nota1 = nota1;
+            Nota2 = nota2;
+        }
     }
 }
