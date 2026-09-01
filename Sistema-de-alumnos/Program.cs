@@ -22,3 +22,11 @@ Console.WriteLine($"El alumno {alumno2.Nombre} tiene el legajo: {alumno2.Legajo}
 //Cambio el nombre del primer alumno
 alumno1.Nombre = "Juanca";
 Console.WriteLine($"El nombre del alumno con el legajo {alumno1.Legajo}, fue cambiado a {alumno1.Nombre}");
+
+Console.WriteLine($"El promedio de {alumno1.Nombre} es {alumno1.Promedio()}");
+
+Console.WriteLine($" {alumno1.Nombre} esta {alumno1.EstasAprobado()}");
+
+alumno1.SubirNota();
+
+Console.WriteLine($"Le subimos la nota a el alumno {alumno1.Nombre} es {alumno1.Promedio()}");

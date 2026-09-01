@@ -18,5 +18,43 @@ namespace Sistema_de_alumnos
             Nota1 = nota1;
             Nota2 = nota2;
         }
+
+        public decimal Promedio()
+        {
+            decimal promedio = (Nota1 +  Nota2) / 2;
+            return promedio;
+            Console.WriteLine($"El promedio de las notas es{promedio}");
+        }
+        public bool EstasAprobado()
+        {
+            if (Promedio() >= 6)
+            {
+                return true;
+            }
+            else 
+            { 
+                return false; 
+            }
+        }
+        public void SubirNota()
+        {
+            if (Nota1 + 1m > 10m)
+            {
+                Nota1 = 10m;
+            }
+            else
+            {
+                Nota1++;
+            }
+
+            if (Nota2 + 1m > 10m)
+            {
+                Nota2 = 10m;
+            }
+            else
+            {
+                Nota2++;
+            }
+        }
     }
 }
