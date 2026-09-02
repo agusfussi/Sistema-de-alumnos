@@ -30,3 +30,7 @@ Console.WriteLine($" {alumno1.Nombre} esta {alumno1.EstasAprobado()}");
 alumno1.SubirNota();
 
 Console.WriteLine($"Le subimos la nota a el alumno {alumno1.Nombre} es {alumno1.Promedio()}");
+
+//Etapa 4
+
+Console.WriteLine(alumno1);
