@@ -19,11 +19,13 @@ while (true)
     switch (opcion)
     {
         case "1":
-            Console.Write("Escribe el nombre del alumno:");
+            Console.Write("Escribe el nombre del alumno: ");
             string nombre = Console.ReadLine();
-            Console.Write("Escribe su legajo:");
+            Console.Write("Escribe su legajo: ");
             int legajo = int.Parse(Console.ReadLine());
-            Alumno nuevoAlumno = new Alumno(nombre, legajo);
+            Console.Write("Escribe su DNI: ");
+            int dni = int.Parse(Console.ReadLine());
+            Alumno nuevoAlumno = new Alumno(nombre, legajo, dni);
             Console.Write("Ahora escribe la primer nota del alumno:");
             decimal nota1 = decimal.Parse(Console.ReadLine());
             Console.Write("Ahora escribe la segunda nota del alumno:");

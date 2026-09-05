@@ -4,17 +4,18 @@ using System.Text;
 
 namespace Sistema_de_alumnos
 {
-    public class Alumno
+     class Alumno: Persona
     {
-        public string Nombre { get; set; }
+        //public string Nombre { get; set; }
         public int Legajo { get; private set; }
         public decimal Nota1 { get; private set; }
         public decimal Nota2 { get; private set; }
 
-        public Alumno(string nombre, int legajo) //decimal nota1, decimal nota2)
+        public Alumno(string nombre, int dni , int legajo)  : base(nombre, dni)//decimal nota1, decimal nota2)
         {
-            Nombre = nombre;
+            //Nombre = nombre;
             Legajo = legajo;
+            //DNI = dni;
             //Nota1 = nota1;
             //Nota2 = nota2;
         }
