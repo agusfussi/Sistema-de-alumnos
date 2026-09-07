@@ -1,7 +1,28 @@
 ﻿//Creo los alumnos
 using Sistema_de_alumnos;
 //Etapa 6
-List<Alumno> alumnos = new List<Alumno>();
+//List<Alumno> alumnos = new List<Alumno>();
+//Etapa 8
+List<Persona> alumnos = new List<Persona>();
+
+
+List<Persona> personas = new List<Persona>();
+Profesor profesorDePrueba = new Profesor("Juan", 658, "Matematica");
+personas.Add(profesorDePrueba);
+//Console.WriteLine(profesorDePrueba.Presentarse());
+
+Preseptor preseptorDePrueba = new Preseptor("Marcos", 883, "1ro B");
+personas.Add(preseptorDePrueba);
+//Console.WriteLine(preseptorDePrueba.Presentarse());
+
+Alumno alumnoDePrueba = new Alumno("Marta", 58, 1);
+personas.Add(alumnoDePrueba);
+//Console.WriteLine(alumnoDePrueba.Presentarse());
+
+foreach(Persona persona in personas)
+{
+    Console.WriteLine(persona.Presentarse());
+}
 
 while (true) 
 {
@@ -21,11 +42,11 @@ while (true)
         case "1":
             Console.Write("Escribe el nombre del alumno: ");
             string nombre = Console.ReadLine();
-            Console.Write("Escribe su legajo: ");
-            int legajo = int.Parse(Console.ReadLine());
             Console.Write("Escribe su DNI: ");
             int dni = int.Parse(Console.ReadLine());
-            Alumno nuevoAlumno = new Alumno(nombre, legajo, dni);
+            Console.Write("Escribe su legajo: ");
+            int legajo = int.Parse(Console.ReadLine());
+            Alumno nuevoAlumno = new Alumno(nombre, dni, legajo);
             Console.Write("Ahora escribe la primer nota del alumno:");
             decimal nota1 = decimal.Parse(Console.ReadLine());
             Console.Write("Ahora escribe la segunda nota del alumno:");
@@ -43,9 +64,9 @@ while (true)
 ////////////////////////////////////////////////////////////////////
         case "2":
             Console.WriteLine("Esta es la lista de alumnos:");
-            foreach (Alumno alumno in alumnos)
+            foreach (Alumno persona in alumnos)
             {
-                Console.WriteLine(alumno);
+                Console.WriteLine(persona.Presentarse());
             }
             break;
 ///////////////////////////////////////////////////////////////////

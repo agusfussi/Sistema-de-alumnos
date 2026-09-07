@@ -78,5 +78,12 @@ namespace Sistema_de_alumnos
             return $"{Legajo} - {Nombre} (Promedio:{Promedio()})";
         }
         // Advertencia: Si le sacamos el 'override', C# nos avisa que estamos ocultando el ToString() original en lugar de reemplazarlo correctamente.
+
+        //Etapa 8
+
+        public override string Presentarse()
+        {
+            return $"Hola, soy {Nombre}, alumno con legajo {Legajo}.";
+        }
     }
 }

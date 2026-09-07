@@ -11,8 +11,14 @@ namespace Sistema_de_alumnos
 
         public Persona(string nombre, int dni)
         {
-            nombre = Nombre;
-            dni = DNI;
+            Nombre = nombre;
+            DNI = dni;
+        }
+
+        //Etapa 8
+        public virtual string Presentarse() 
+        {
+            return $"Hola, soy {Nombre}";
         }
     }
 }

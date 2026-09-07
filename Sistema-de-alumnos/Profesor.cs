@@ -16,5 +16,11 @@ namespace Sistema_de_alumnos
             //Nota1 = nota1;
             //Nota2 = nota2;
         }
+
+        //Etapa 8
+        public override string Presentarse() 
+        {
+            return $"Hola, soy {Nombre} y dicto la materia {Materia}.";
+        }
     }
 }
