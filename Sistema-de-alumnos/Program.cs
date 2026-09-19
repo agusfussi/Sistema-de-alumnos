@@ -18,8 +18,24 @@ personas.Add(preseptorDePrueba);
 Alumno alumnoDePrueba = new Alumno("Marta", 58, 1);
 personas.Add(alumnoDePrueba);
 //Console.WriteLine(alumnoDePrueba.Presentarse());
+//Etapa9
+//Materias Precargadas:
+List<IExportable> listaExportar = new List<IExportable>();
 
-foreach(Persona persona in personas)
+Materia materia1 = new Materia(1, "Programacion", 2);
+listaExportar.Add(materia1);
+listaExportar.Add(alumnoDePrueba);
+
+Materia materia2 = new Materia(2, "Matemática", 64);
+listaExportar.Add(materia2);
+
+
+foreach (IExportable item in listaExportar)
+{
+    Console.WriteLine(item.ExportarLinea());
+}
+
+foreach (Persona persona in personas)
 {
     Console.WriteLine(persona.Presentarse());
 }

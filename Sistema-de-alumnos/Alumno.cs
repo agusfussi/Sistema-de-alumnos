@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sistema_de_alumnos
 {
-     class Alumno: Persona
+     class Alumno: Persona, IExportable
     {
         //public string Nombre { get; set; }
         public int Legajo { get; private set; }
@@ -84,6 +84,11 @@ namespace Sistema_de_alumnos
         public override string Presentarse()
         {
             return $"Hola, soy {Nombre}, alumno con legajo {Legajo}.";
+        }
+        //Etapa 9
+        public string ExportarLinea()
+        {
+            return $"ALUMNO;{Legajo};{Nombre};{Promedio()}";
         }
     }
 }

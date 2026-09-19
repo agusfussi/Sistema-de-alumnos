@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sistema_de_alumnos
 {
-    class Profesor : Persona
+    class Profesor : Persona, IExportable
     {
         public string Materia { set; get; }
 
@@ -21,6 +21,11 @@ namespace Sistema_de_alumnos
         public override string Presentarse() 
         {
             return $"Hola, soy {Nombre} y dicto la materia {Materia}.";
+        }
+        //Etapa 9
+        public string ExportarLinea()
+        {
+            return $"PROFESOR;{Nombre};{Materia}";
         }
     }
 }
